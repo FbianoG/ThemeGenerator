@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Montserrat as font, Geist_Mono as fontMono } from 'next/font/google';
 import './globals.css';
 
-const geistSans = Geist({
-	variable: '--font-geist-sans',
+const Font = font({
+	variable: '--font-sans',
 	subsets: ['latin'],
 });
 
-const geistMono = Geist_Mono({
-	variable: '--font-geist-mono',
+const FontMono = fontMono({
+	variable: '--font-mono',
 	subsets: ['latin'],
 });
 
@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='pt-br'>
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+			<body className={`${Font.variable} ${FontMono.variable} antialiased`}>{children}</body>
 		</html>
 	);
 }

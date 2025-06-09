@@ -34,7 +34,7 @@ export function DialogDemo({ dynamicCSS }: Props) {
 					<DialogDescription>Copie e cole o CSS gerado no seu projeto.</DialogDescription>
 				</DialogHeader>
 				<div className=' relative'>
-					<textarea className='w-full h-150 outline-none p-4 border rounded py-2 resize-none scroll bg-background ' spellCheck={false}>
+					<textarea className='w-full h-150 outline-none p-4 border rounded py-2 resize-none scroll bg-background font-mono ' spellCheck={false}>
 						{dynamicCSS}
 					</textarea>
 					<Button variant='ghost' onClick={copy} className='absolute top-1 right-6'>
