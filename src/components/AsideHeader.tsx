@@ -22,11 +22,11 @@ const AsideHeader = ({ changeDarkMode, hexActive, setHexActive, theme }: Props) 
 					<SelectTrigger className='w-[180px] capitalize'>
 						<SelectValue placeholder='Selecionar Tema' />
 					</SelectTrigger>
-					<SelectContent>
+					<SelectContent className='h-150'>
 						<SelectGroup>
 							<SelectLabel>Themes</SelectLabel>
 							{(Object.keys(Themes) as (keyof typeof Themes)[]).map((t) => (
-								<SelectItem key={t as string} value={t as string} className='capitalize flex justify-between'>
+								<SelectItem key={t as string} value={t as string} className='capitalize flex '>
 									{t as string}
 									<div className='flex gap-1 w-max '>
 										{Themes[t][theme].map((field) => {
